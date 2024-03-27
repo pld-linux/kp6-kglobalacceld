@@ -7,7 +7,7 @@
 Summary:	kgglobalacceld
 Name:		kp6-kglobalacceld
 Version:	6.0.3
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/kglobalacceld-%{version}.tar.xz
@@ -78,7 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libKGlobalAccelD.so.*.*
 %dir %{_libdir}/qt6/plugins/org.kde.kglobalacceld.platforms
 %attr(755,root,root) %{_libdir}/qt6/plugins/org.kde.kglobalacceld.platforms/KGlobalAccelDXcb.so
-%{_prefix}/libexec/kglobalacceld
+%attr(755,root,root) %{_prefix}/libexec/kglobalacceld
 
 %files devel
 %defattr(644,root,root,755)
