@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.3.3
+%define		kdeplasmaver	6.3.4
 %define		qtver		5.15.2
 %define		kpname		kglobalacceld
 Summary:	kgglobalacceld
 Name:		kp6-kglobalacceld
-Version:	6.3.3
+Version:	6.3.4
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/kglobalacceld-%{version}.tar.xz
-# Source0-md5:	4a3ad0c0e9b2436a52b1b2fa58006ade
+# Source0-md5:	d3f9bc897dae7daa46bb53d1c1b23f25
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
