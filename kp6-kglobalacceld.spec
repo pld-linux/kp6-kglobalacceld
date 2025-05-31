@@ -10,7 +10,7 @@ Summary:	KDE global shortcuts server and library
 Summary(pl.UTF-8):	Biblioteka i serwer globalnych skrótów klawiszowych KDE
 Name:		kp6-kglobalacceld
 Version:	6.3.5
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/kglobalacceld-%{version}.tar.xz
