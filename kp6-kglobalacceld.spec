@@ -22,7 +22,6 @@ BuildRequires:	Qt6Gui-devel >= %{qt_ver}
 BuildRequires:	Qt6Qml-devel >= %{qt_ver}
 BuildRequires:	Qt6Widgets-devel >= %{qt_ver}
 BuildRequires:	cmake >= 3.16.0
-BuildRequires:	gettext-devel
 BuildRequires:	kf6-extra-cmake-modules >= %{kf_ver}
 BuildRequires:	kf6-kconfig-devel >= %{kf_ver}
 BuildRequires:	kf6-kcoreaddons-devel >= %{kf_ver}
@@ -57,7 +56,6 @@ Requires:	kf6-kjobwidgets >= %{kf_ver}
 Requires:	kf6-kservice >= %{kf_ver}
 Requires:	kf6-kwindowsystem >= %{kf_ver}
 Requires:	qt6-qdbus
-Obsoletes:	kp5-%{kpname} < 6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -73,7 +71,6 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	kf6-kglobalaccel-devel >= %{kf_ver}
 Requires:	libstdc++-devel >= 6:8
-Obsoletes:	kp5-%{kpname}-devel < 6
 
 %description devel
 Header files for %{kpname} development.
