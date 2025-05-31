@@ -1,10 +1,12 @@
 #
 # Conditional build:
-%bcond_with	tests		# build with tests
+%bcond_with	tests		# test suite
+
 %define		kdeplasmaver	6.3.5
 %define		qtver		5.15.2
 %define		kpname		kglobalacceld
-Summary:	kgglobalacceld
+Summary:	KDE global shortcuts server and library
+Summary(pl.UTF-8):	Biblioteka i serwer globalnych skrótów klawiszowych KDE
 Name:		kp6-kglobalacceld
 Version:	6.3.5
 Release:	1
@@ -12,7 +14,7 @@ License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/kglobalacceld-%{version}.tar.xz
 # Source0-md5:	80d5b2fe1c78d16e647f15eb38a7d37f
-URL:		http://www.kde.org/
+URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
 BuildRequires:	Qt6Widgets-devel >= %{qtver}
@@ -31,7 +33,10 @@ Obsoletes:	kp5-%{kpname} < 6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-kglobalacceld
+KDE global shortcuts server and library.
+
+%description -l pl.UTF-8
+Biblioteka i serwer globalnych skrótów klawiszowych KDE.
 
 %package devel
 Summary:	Header files for %{kpname} development
