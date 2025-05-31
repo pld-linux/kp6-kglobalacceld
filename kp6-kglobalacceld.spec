@@ -56,6 +56,9 @@ Requires:	kf6-kjobwidgets >= %{kf_ver}
 Requires:	kf6-kservice >= %{kf_ver}
 Requires:	kf6-kwindowsystem >= %{kf_ver}
 Requires:	qt6-qdbus
+Provides:	kf5-kglobalaccel-service = %{version}-%{release}
+Obsoletes:	kf5-kglobalaccel-service < 6
+Conflicts:	kf5-kglobalaccel < 5.116.0-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -77,7 +80,6 @@ Header files for %{kpname} development.
 
 %description devel -l pl.UTF-8
 Pliki nagłówkowe dla programistów używających %{kpname}.
-
 
 %prep
 %setup -q -n %{kpname}-%{version}
