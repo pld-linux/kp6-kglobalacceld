@@ -2,19 +2,19 @@
 # Conditional build:
 %bcond_with	tests		# test suite
 
-%define		kdeplasmaver	6.4.3
+%define		kdeplasmaver	6.4.4
 %define		qt_ver		6.7.0
 %define		kf_ver		6.10.0
 %define		kpname		kglobalacceld
 Summary:	KDE global shortcuts server and library
 Summary(pl.UTF-8):	Biblioteka i serwer globalnych skrótów klawiszowych KDE
 Name:		kp6-kglobalacceld
-Version:	6.4.3
+Version:	6.4.4
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/kglobalacceld-%{version}.tar.xz
-# Source0-md5:	411d18427c65362bb734aa2654946231
+# Source0-md5:	2a3cb2bc67a700808ee4de996fbcf7e1
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= %{qt_ver}
 BuildRequires:	Qt6DBus-devel >= %{qt_ver}
