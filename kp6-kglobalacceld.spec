@@ -2,19 +2,19 @@
 # Conditional build:
 %bcond_with	tests		# test suite
 
-%define		kdeplasmaver	6.4.4
+%define		kdeplasmaver	6.4.5
 %define		qt_ver		6.7.0
 %define		kf_ver		6.10.0
 %define		kpname		kglobalacceld
 Summary:	KDE global shortcuts server and library
 Summary(pl.UTF-8):	Biblioteka i serwer globalnych skrótów klawiszowych KDE
 Name:		kp6-kglobalacceld
-Version:	6.4.4
+Version:	6.4.5
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/kglobalacceld-%{version}.tar.xz
-# Source0-md5:	2a3cb2bc67a700808ee4de996fbcf7e1
+# Source0-md5:	e97ee677851e2e56a2298e79a471ded1
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= %{qt_ver}
 BuildRequires:	Qt6DBus-devel >= %{qt_ver}
@@ -41,7 +41,6 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	xcb-util-keysyms-devel
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xz
-Requires:	Qt6Core >= %{qt_ver}
 Requires:	Qt6DBus >= %{qt_ver}
 Requires:	Qt6Gui >= %{qt_ver}
 Requires:	Qt6Qml >= %{qt_ver}
@@ -56,6 +55,7 @@ Requires:	kf6-kjobwidgets >= %{kf_ver}
 Requires:	kf6-kservice >= %{kf_ver}
 Requires:	kf6-kwindowsystem >= %{kf_ver}
 Requires:	qt6-qdbus
+%requires_eq_to Qt6Core Qt6Core-devel
 Provides:	kf5-kglobalaccel-service = %{version}-%{release}
 Obsoletes:	kf5-kglobalaccel-service < 6
 Conflicts:	kf5-kglobalaccel < 5.116.0-2
