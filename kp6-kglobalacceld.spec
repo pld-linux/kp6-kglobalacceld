@@ -2,19 +2,19 @@
 # Conditional build:
 %bcond_with	tests		# test suite
 
-%define		kdeplasmaver	6.4.5
+%define		kdeplasmaver	6.5.0
 %define		qt_ver		6.7.0
 %define		kf_ver		6.10.0
 %define		kpname		kglobalacceld
 Summary:	KDE global shortcuts server and library
 Summary(pl.UTF-8):	Biblioteka i serwer globalnych skrótów klawiszowych KDE
 Name:		kp6-kglobalacceld
-Version:	6.4.5
-Release:	2
+Version:	6.5.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/kglobalacceld-%{version}.tar.xz
-# Source0-md5:	e97ee677851e2e56a2298e79a471ded1
+# Source0-md5:	d2817f495dddbd728792b4238901b833
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= %{qt_ver}
 BuildRequires:	Qt6DBus-devel >= %{qt_ver}
@@ -111,13 +111,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKGlobalAccelD.so.*.*
+%{_libdir}/libKGlobalAccelD.so.*.*
 %ghost %{_libdir}/libKGlobalAccelD.so.0
 /etc/xdg/autostart/kglobalacceld.desktop
 %{systemduserunitdir}/plasma-kglobalaccel.service
 %dir %{_libdir}/qt6/plugins/org.kde.kglobalacceld.platforms
-%attr(755,root,root) %{_libdir}/qt6/plugins/org.kde.kglobalacceld.platforms/KGlobalAccelDXcb.so
+%{_libdir}/qt6/plugins/org.kde.kglobalacceld.platforms/KGlobalAccelDXcb.so
 %attr(755,root,root) %{_prefix}/libexec/kglobalacceld
+%{_datadir}/qlogging-categories6/kglobalacceld.categories
 
 %files devel
 %defattr(644,root,root,755)
